@@ -1,31 +1,36 @@
 /* RESET default margin & padding */
-body {
+* {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   box-sizing: border-box;
 }
 
+body{
+  overflow: hidden;
+}
+
 /* SECTION WRAPPER */
-.about-me-section {
-  margin: auto;
-  width: 1547px;
-  height: 790px;
+.about-me-section{
+  /* min-height: 100dvh; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 /* NAVIGATION */
 .navbar {
   display: flex;
   justify-content: flex-end;
-  margin-top: 145px;
   width: 100%;
+  padding: 1.5rem 2rem;
 }
 
 .nav-links a {
-  margin: 0 12px;
+  margin: 0 .7rem;
   font-family: 'Press Start 2P', cursive;
   text-decoration: none;
   color: black;
+  font-size: .8rem;
   transition: color 0.3s ease;
 }
 
@@ -36,44 +41,58 @@ body {
 }
 
 /* CONTENT CONTAINER */
+
 .about-content {
   display: flex;
-  margin-top: -130px;
 }
 
 /* LEFT: SIGN IMAGE */
+
+.sign-image{
+  width: 50%;
+  height: 50%;
+}
+
+.intro-section
+{
+  width: 100%;
+  min-height: 100vh;
+  padding: 0 2rem;
+}
+
 .sign-image img {
-  width: 608px;
-  margin-left: -100px;
+  width: 100%;
+  height: 100%;
 }
 
 /* CENTER: TEXT */
 .intro-text {
-  transform: rotate(-10.56deg);
-  margin-top: -100px;
-  margin-left: 38px;
+  transform: skewX(25deg) skewY(-10deg) rotateX(-20deg) rotateZ(-2.5deg);
+  margin-top: -3.5rem;
+  margin-left: .5em;
+  padding: 0 3rem;
 }
 
 .intro-text span {
   font-family: 'Press Start 2P', cursive;
-  font-size: 24px;
+  font-size: 1rem;
 }
 
 .intro-text p {
   font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: 1.1rem;
   margin-top: -1px;
 }
 
 /* RIGHT: ILLUSTRATION */
 .illustration {
-  width: 765px;
-  height: 765px;
-  margin-top: 150px;
+  padding: 1.5rem;
+  padding-bottom: 5rem;
+  width: 90%;
+  height: auto;
 }
 
 .illustration img {
-  width: 675px;
-  height: 675px;
-  margin-left: 150px;
+  width: 100%;
+  height: 100%;
 }

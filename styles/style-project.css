@@ -7,31 +7,31 @@ body {
 }
 
 /* ===== SECTION WRAPPER ===== */
-#project-section {
-  margin: auto;
-  width: 1547px;
-  height: 790px;
-}
-
-/* ===== NAVIGATION ===== */
-.navbar {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 145px;
+.project-section {
   width: 100%;
 }
 
+/* ===== NAVIGATION ===== */
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.5rem 2rem;
+}
+
 .nav-links a {
-  margin: 0 12px;
-  font-family: 'Press Start 2P', cursive;
+  margin: 0 0.7rem;
+  font-family: "Press Start 2P", cursive;
   text-decoration: none;
   color: black;
+  font-size: 0.8rem;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
 .nav-links .active-link {
-  color: #D5A362;
+  color: #d5a362;
   text-decoration: underline;
 }
 
@@ -40,56 +40,109 @@ body {
   display: flex;
 }
 
+.my-project-sign {
+  width: 50%;
+}
+
 .my-project-sign img {
-  width: 476px;
+  width: 100%;
   height: auto;
 }
 
 /* ===== PROJECT CONTAINER ===== */
 .project-container {
-  display: flex;
-  width: 1541px;
-  height: 659px;
-  margin-top: -70px;
-  padding-bottom: 70px;
-  gap: 58px;
+  width: 100%;
+  padding: 2rem 0;
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+  grid-template-columns: 350px 350px 350px;
 }
 
 /* ===== CARD STYLE ===== */
 .card {
-  background-color: #45311C;
-  width: 475px;
+  width: 350px;
+  height: 350px;
+  perspective: 100rem;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card.active .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.8);
+  border-radius: 2rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card-front img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-front::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(213, 163, 98, 0.2);
+  z-index: 99;
+  border-radius: 1.5rem;
+}
+
+.card-back {
+  font-family: "Press Start 2P", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 45px;
-  border-radius: 30px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.30);
+  justify-content: center;
+  background: #755035;
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 99;
+  transform: rotateY(180deg);
 }
 
-/* ===== CONTENT INSIDE CARD ===== */
-.container {
-  text-align: center;
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
+.card-back h3{
+  font-size: .8rem;
 }
 
-/* ===== BUTTON STYLE ===== */
-.container button {
-  margin-top: 24px;
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
-  border: none;
-  border-radius: 12px;
-  background-color: #D5A362;
-  padding: 20px 30px;
-  box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.75);
+.card-back p{
+  font-size: .8rem;
+}
+
+.card-back a {
+  margin-top: 1rem;
   cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  background: #d5a362;
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  font-size: .6rem;
+  transition: all .6s ease;
 }
 
-.container button:hover {
-  background-color: #755035;
-  color: #D5A362;
+.card-back a:hover{
+  background: #d5a36286;
 }

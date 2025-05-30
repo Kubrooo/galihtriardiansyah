@@ -19,7 +19,7 @@ Website ini dirancang dengan gaya **low-poly 2D dan 3D** yang unik untuk menampi
 
 ## 🌍 Live Preview
 
-Coming soon!
+(https://kubrooo.github.io/galihtriardiansyah/)
 
 ## 🧑‍💻 Author
 
