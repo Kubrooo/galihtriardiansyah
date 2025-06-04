@@ -8,7 +8,11 @@ body {
 /* Hero section */
 .hero-section {
   width: 100%;
+  max-width: 100.625rem;
+  height: 100%;
+  max-height: 48rem;
   margin: auto;
+  margin-top: 8.438rem;
 }
 
 /* Navigasi */
@@ -28,7 +32,7 @@ body {
   font-family: "Press Start 2P", cursive;
   text-decoration: none;
   color: black;
-  font-size: 0.8rem;
+  font-size: 1em;
   transition: color 0.3s ease;
 }
 
@@ -61,18 +65,18 @@ body {
 
 .hero-tagline span {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.4em;
+  font-size: 2em;
 }
 
 .hero-tagline h1 {
   font-family: 'Press Start 2P', cursive;
-  font-size: 1.7rem;
+  font-size: 2.5em;
   text-shadow: 2px 2px #D5A362;
 }
 
 .hero-tagline p {
   font-family: "Inter";
-  font-size: 1.4em;
+  font-size: 2em;
 }
 
 /* Tombol CTA Umum */
@@ -93,6 +97,7 @@ body {
 
 .btn-see-project:hover {
   background-color: #D5A362;
+  cursor: pointer;
 }
 
 /* Tombol "Hire Me" */
@@ -103,6 +108,7 @@ body {
 
 .btn-hire-me:hover {
   background-color: #755035;
+  cursor: pointer;
 }
 
 .typing-text {
